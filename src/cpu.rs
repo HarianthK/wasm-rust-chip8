@@ -361,11 +361,11 @@ mod tests {
         
         cpu.process_opcode(0x8124);
         assert_eq!(cpu.v[1], 110, "Vx was loaded with vx + vy");
-        assert_eq!(cpu.v[0xF], 0, "no overflow occured");
+        assert_eq!(cpu.v[0xF], 0, "no overflow occurred");
 
         cpu.process_opcode(0x8134);
         assert_eq!(cpu.v[1], 0x68, "Vx was loaded with vx + vy");
-        assert_eq!(cpu.v[0xF], 1, "overflow occured");
+        assert_eq!(cpu.v[0xF], 1, "overflow occurred");
     }
 
     #[test]
